@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8">
+    <title>Cron&oacute;metro con eventos t&aacute;ctiles</title>
+    <link href="css/fuentes.css" rel="stylesheet" type="text/css" />
+    <link href="css/style_fuentes.css" rel="stylesheet" type="text/css" />
+    <link href='http://fonts.googleapis.com/css?family=Oxygen:400,700' rel='stylesheet' type='text/css'>
+    <script type="text/javascript" src="js/zepto.min.js"></script>
+    <script type="text/javascript" src="js/touch.js"></script><script type="text/javascript">
+    $(function(){
+        localStorage.c = (localStorage.c || "0.0");
+        var t, cl = $("#crono"); listar = $("#lista");
+    
+        function incr(){
+            localStorage.c = +localStorage.c + 0.02;
+        }
+        function mostrar(){
+            cl.html(( + localStorage.c).toFixed(2));
+        }
+        function arrancar(){
+            t = setInterval(function(){
+                incr();
+                mostrar();
+            },150);
+        }
+        function parar(){
+            clearInterval(t); 
+            t = undefined; 
+            listar.append(cl.html() + " segundos<br/>"); 
+        }
+        function cambiar(){
+            if(!t){
+                arrancar();
+            }
+            else {
+                parar();
+            }
+        }
+            
+       $("#cambiar").on('tap',cambiar);
+       $("#cambiar").on('swipe',function(){
+           if (t === undefined){
+               localStorage.c = ("0.0");
+               cl.html("0.0");
+               listar.html("");
+           }
+       });
+    });
+    </script>
+</head>
+<body>
+    <header class="cabezera">
+        <div id="logo">
+           <h2></h2>
+        </div>
+        <div id="fecha"></div>
+    </header>
+    <article class="contenedor">
+
+       <div id="cambiar">
+
+        <center>
+
+          <h1 id="titulos">Cron&oacute;metro t&aacute;ctil</h1>
+
+          <div class="clock" style="margin: 1.125rem;"></div>
+
+          <div class="cuadrado2" id="logo"><span id="crono"> 0.0 </span></div>
+
+
+            <p>Tiempos<br></p>
+
+            <p id="lista"></p>
+
+        </center>
+
+       </div>
+
+    </article>
+
+
+    </body>
+</html>

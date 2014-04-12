@@ -1,0 +1,56 @@
+@import url(http://fonts.googleapis.com/css?family=Oxygen:400,700);
+
+@font-face { font-family: FiraSansOT-Regular;
+ src:url(fuentes/FiraSansOT-Regular.otf);
+  }
+
+@font-face {
+	font-family: "FiraSansOT-Light";
+	src: url(FiraOpenType/FiraSansOT-Light.otf) format("opentype");
+}
+
+@font-face {
+	font-family: "FiraSansOT-LightItalic";
+	src: url(FiraOpenType/FiraSansOT-LightItalic.otf) format("opentype");
+}
+
+@font-face {
+	font-family: "FiraSansOT-Regular";
+	src: url(FiraOpenType/FiraSansOT-Regular.otf) format("opentype");
+}
+
+@font-face {
+	font-family: "FiraSansOT-RegularItalic";
+	src: url(FiraOpenType/FiraSansOT-RegularItalic.otf) format("opentype");
+}
+
+@font-face {
+	font-family: "FiraSansOT-Medium";
+	src: url(FiraOpenType/FiraSansOT-Medium.otf) format("opentype");
+}
+
+@font-face {
+	font-family: "FiraSansOT-MediumItalic";
+	src: url(FiraOpenType/FiraSansOT-MediumItalic.otf) format("opentype");
+}
+
+@font-face {
+	font-family: "FiraSansOT-Bold";
+	src: url(FiraOpenType/FiraSansOT-Bold.otf) format("opentype");
+}
+
+@font-face {
+	font-family: "FiraSansOT-BoldItalic";
+	src: url(FiraOpenType/FiraSansOT-BoldItalic.otf) format("opentype");
+}
+
+
+@font-face {
+	font-family: "FiraMonoOT-Regular";
+	src: url(FiraOpenType/FiraMonoOT-Regular.otf) format("opentype");
+}
+
+@font-face {
+	font-family: "FiraMonoOT-Bold";
+	src: url(FiraOpenType/FiraMonoOT-Bold.otf) format("opentype");
+}
